@@ -24,7 +24,7 @@ def count_sort(x: list[int]) -> list[int]:
     return out
 ```
 
-Growing a list can be more expensive than pre-allocating one of the right length, though, and in some languages you don't have lists that you can append, so I want to make it just a little more difficult. Implement a `count_sort()` function (see `src/bsort.py`) where you allocate the output list in one go, and then insert the keys in it.
+Growing a list can be more expensive than pre-allocating one of the right length, though, and in some languages you don't have lists that you can append, so we will make it just a little more difficult. Implement a `count_sort()` function (see `src/bsort.py`) where you allocate the output list in one go, and then insert the keys in it.
 
 ```python
 def count_sort(x: list[int]) -> list[int]:
@@ -40,7 +40,7 @@ Now you can do a count sort, and you have most of what you need to implement a b
 
 ## Bucket sort
 
-The kind of bucket sort I want you to implement resembles the `count_sort()` above in that we will allocate an `out` list for the output and that and the key counts is the only extra list we will use. No list of lists to append to or any such thing, just a simple list of integers.
+The kind of bucket sort you will implement resembles the `count_sort()` above in that we will allocate an `out` list for the output and that and the key counts is the only extra list we will use. No list of lists to append to or any such thing, just a simple list of integers.
 
 Our input is a list of pairs `x = [(k0,x0), (k1,x1), ..., ]` and we want to rearrange it such that the pairs are sorted with respect to their keys, but in a stable manner, such that pairs with the same key will come out in the same order as they came in.
 
